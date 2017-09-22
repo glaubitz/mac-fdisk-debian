@@ -9,6 +9,7 @@ Vcs-Browser: https://github.com/glaubitz/mac-fdisk-debian
 
 Package: mac-fdisk
 Architecture: m68k powerpc ppc64
+Section: utils
 Depends: ${shlibs:Depends}
 Description: Apple disk partition manipulation tool
  The fdisk utilities from the MkLinux project, adopted for Linux/m68k.
@@ -21,6 +22,7 @@ Description: Apple disk partition manipulation tool
 
 Package: pmac-fdisk
 Architecture: powerpc ppc64
+Section: utils
 Depends: ${shlibs:Depends}
 Description: fdisk partition manipulation tool for PowerPC
  The fdisk utilities from the MkLinux project, adopted for Linux/ppc.
