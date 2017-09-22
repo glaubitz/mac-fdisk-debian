@@ -12,14 +12,10 @@ packmn  = mac-fdisk
 packmc  = mac-fdisk-cross
 packpmn = pmac-fdisk
 packpmc = pmac-fdisk-cross
-packudeb = mac-fdisk-udeb
-packpudeb = pmac-fdisk-udeb
 tmpmn   = debian/tmp
 tmpmc   = debian/$(packmc)
 tmppmn  = debian/$(packpmn)
 tmppmc  = debian/$(packpmc)
-tmpudeb = debian/$(packudeb)
-tmppudeb = debian/$(packpudeb)
 docmn   = $(tmpmn)/usr/share/doc/$(packmn)
 docmc   = $(tmpmc)/usr/share/doc/$(packmc)
 docpmn  = $(tmppmn)/usr/share/doc/$(packpmn)
@@ -42,7 +38,7 @@ clean:
 	-rm -f build
 	-make clean
 	-rm -f `find . -name "*~"`
-	-rm -rf $(tmpmn) $(tmpmc) $(tmppmn) $(tmppmc) $(tmpudeb) $(tmppudeb) debian/files* core debian/*substvars
+	-rm -rf $(tmpmn) $(tmpmc) $(tmppmn) $(tmppmc) debian/files* core debian/*substvars
 
 binary-indep: build
 	$(checkdir)
@@ -98,20 +94,6 @@ binary-arch: build
 	# and move the pdisk man page back again ...
 	mv pdisk.8.in pdisk.8
 
-	# install mac-fdisk-udeb files
-	set -e; if [ "$(BUILDARCH)" = "m68k" ] || [ -n "$(POWERPC)" ]; then \
-		install -d $(tmpudeb)/sbin; \
-		install -d $(tmpudeb)/DEBIAN; \
-		install -m 755 pdisk $(tmpudeb)/sbin/mac-fdisk; \
-	fi
-
-	# install pmac-fdisk-udeb files
-	set -e; if [ -n "$(POWERPC)" ]; then \
-		install -d $(tmppudeb)/usr/sbin; \
-		install -d $(tmppudeb)/DEBIAN; \
-		install -m 755 fdisk $(tmppudeb)/usr/sbin/pmac-fdisk; \
-	fi
-
 	# build native pdisk only for m68k, cross package only for others
 	set -e; if [ "$(BUILDARCH)" = "m68k" ] || [ -n "$(POWERPC)" ]; then \
 		dh_strip -p$(packmn) -P$(tmpmn); \
@@ -157,24 +139,6 @@ binary-arch: build
 		dh_builddeb -p$(packpmn); \
 	else \
 		dh_builddeb -p$(packpmc); \
-	fi
-
-	# build mac-fdisk-udeb on powerpc and m68k
-	set -e; if [ "$(BUILDARCH)" = "m68k" ] || [ -n "$(POWERPC)" ]; then \
-		dh_strip -p$(packudeb); \
-		dh_installdeb -p$(packudeb); \
-		dh_shlibdeps -p$(packudeb); \
-		dh_gencontrol -p$(packudeb); \
-		dh_builddeb -p$(packudeb); \
-	fi
-
-	# build pmac-fdisk-udeb on powerpc
-	set -e; if [ -n "$(POWERPC)" ]; then \
-		dh_strip -p$(packpudeb); \
-		dh_installdeb -p$(packpudeb); \
-		dh_shlibdeps -p$(packpudeb); \
-		dh_gencontrol -p$(packpudeb); \
-		dh_builddeb -p$(packpudeb); \
 	fi
 
 define checkdir
