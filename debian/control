@@ -1,6 +1,6 @@
 Source: mac-fdisk
 Section: base
-Priority: required
+Priority: optional
 Build-Depends: debhelper, coreutils, grep
 Maintainer: John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>
 Standards-Version: 3.5.8.0
