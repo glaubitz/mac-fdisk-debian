@@ -1,3 +1,25 @@
+mac-fdisk (0.1-18) unstable; urgency=medium
+
+  * New maintainer:
+    - Set myself as maintainer in debian/control
+  * Add missing debian/compat, set to 9
+  * Stop building udeb packages:
+    - Remove references to {mac,pmac}-fdisk-udeb from debian/control
+    - Remove references to udeb packages from debian/rules
+  * Add missing pmac-fdisk-cross package to debian/control as it
+    is actually being built in debian/rules (Closes: #408341)
+  * Build cross packages on i386 as well (Closes: #202019)
+  * Add Vcs-Git and Vcs-Browser URLs to debian/control
+  * Set Priority to optional in debian/control
+  * Remove Priority extra for cross packages in debian/control
+  * Set Section utils for {mac,pmac}-fdisk in debian/control
+  * Remove unnecessary build dependencies coreutils and grep
+  * Update and amend long and short descriptions in debian/control
+  * Remove trailing white-spaces in debian/control
+  * Remove cruft and fix formatting in debian/changelog
+
+ -- John Paul Adrian Glaubitz <glaubitz@physik.fu-berlin.de>  Fri, 22 Sep 2017 16:12:01 +0200
+
 mac-fdisk (0.1-17) unstable; urgency=low
 
   * Fix postinst failure - dpkg --print-installation-architecture
