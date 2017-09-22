@@ -31,7 +31,6 @@ Description: fdisk partition manipulation tool for PowerPC
 Package: mac-fdisk-cross
 Architecture: i386 m68k
 Section: otherosfs
-Priority: extra
 Depends: ${shlibs:Depends}
 Description: Apple disk partition manipulation tool
  The fdisk utilities from the MkLinux project, adopted for Linux/m68k.
@@ -45,7 +44,6 @@ Description: Apple disk partition manipulation tool
 Package: pmac-fdisk-cross
 Architecture: i386 m68k
 Section: otherosfs
-Priority: extra
 Depends: ${shlibs:Depends}
 Description: fdisk partition manipulation tool for PowerPC
  The fdisk utilities from the MkLinux project, adopted for Linux/ppc.
