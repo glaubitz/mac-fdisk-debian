@@ -31,8 +31,8 @@ mac-fdisk (0.1-14) unstable; urgency=low
 
 mac-fdisk (0.1-13) unstable; urgency=low
 
-  * Add patch for broken dpkg --print-gnu-build-architecture (patch by 
-    Andreas Jochens <aj@andaco.de>).
+  * Add patch for broken dpkg --print-gnu-build-architecture
+    (patch by Andreas Jochens <aj@andaco.de>).
     Closes: #328102.
 
  -- Michael Schmitz <schmitz@biophys.uni-duesseldorf.de>  Wed, 14 Sep 2005 17:25:23 +0100
@@ -48,9 +48,9 @@ mac-fdisk (0.1-12) unstable; urgency=low
 mac-fdisk (0.1-11) unstable; urgency=low
 
   * Big fat overdue cleanup - back in business after replacing my stolen
-    Powerbook. 
+    Powerbook.
   * fixes as suggested in proposed NMU: changes mostly by Frank Lichtenheld
-    <djpig@debian.org>, with subarchitecture modifications by Colin Watson 
+    <djpig@debian.org>, with subarchitecture modifications by Colin Watson
     <cjwatson@debian.org>.
   * Copy needed kernel definitions from kernel-headers 2.4.25 (powerpc) and
     2.4.26-m68k (cjwatson; Closes: #262457).
@@ -66,7 +66,7 @@ mac-fdisk (0.1-11) unstable; urgency=low
 mac-fdisk (0.1-10) unstable; urgency=high
 
   * Added .udeb magic to rules (kudos to Gaudenz Steinlin
-    <gaudenz@soziologie.ch>); kept mac-fdisk in /sbin though). 
+    <gaudenz@soziologie.ch>); kept mac-fdisk in /sbin though).
     Closes: #188420.
 
  -- Michael Schmitz <schmitz@biophys.uni-duesseldorf.de>  Wed, 04 Jun 2003 17:06:02 +0200
@@ -104,33 +104,33 @@ mac-fdisk (0.1-7) unstable; urgency=high
 
 mac-fdisk (0.1-6.0potato1) stable; urgency=high
 
-  * Feature added: menu option to create bootstrap partition needed for 
-    powerpc NewWorld machines with the proper type and size (patch supplied 
+  * Feature added: menu option to create bootstrap partition needed for
+    powerpc NewWorld machines with the proper type and size (patch supplied
     by Ethan Benson). This should help newbies that won't read the docs
     anyway. Closes: #99660.
 
   * Bugfix: mac-fdisk used to get the disk size wrong when brute force
-    probing for end-of-disk by seek&read. Turns out gcc did not cope with 
+    probing for end-of-disk by seek&read. Turns out gcc did not cope with
     arithmetics on long long types without explicit cast. Closes: #99700.
 
  -- Michael Schmitz <schmitz@biophys.uni-duesseldorf.de>  Fri, 15 Jun 2001 12:16:35 +0200
 
 mac-fdisk (0.1-6) unstable; urgency=high
 
-  * Feature added: menu option to create bootstrap partition needed for 
-    powerpc NewWorld machines with the proper type and size (patch supplied 
+  * Feature added: menu option to create bootstrap partition needed for
+    powerpc NewWorld machines with the proper type and size (patch supplied
     by Ethan Benson). This should help newbies that won't read the docs
     anyway. Closes: #99660.
 
   * Bugfix: mac-fdisk used to get the disk size wrong when brute force
-    probing for end-of-disk by seek&read. Turns out gcc did not cope with 
+    probing for end-of-disk by seek&read. Turns out gcc did not cope with
     arithmetics on long long types without explicit cast. Closes: #99700.
 
  -- Michael Schmitz <schmitz@biophys.uni-duesseldorf.de>  Mon, 04 Jun 2001 13:54:21 +0200
 
 mac-fdisk (0.1-5) unstable; urgency=low
 
-  * Bugfix: fix build problems for glibc 2.2 (remove string.h includes, 
+  * Bugfix: fix build problems for glibc 2.2 (remove string.h includes,
     use lseek64 for llseek, fix some petty gcc warnings)
 
  -- Michael Schmitz <schmitz@biophys.uni-duesseldorf.de>  Wed, 02 Mar 2001 19:42:01 +0200
@@ -161,8 +161,3 @@ mac-fdisk (0.1-1) unstable; urgency=low
   * Initial Release. (built from previous pdisk-0.4a2 with fixes by Roman Hodek)
 
  -- Michael Schmitz <schmitz@lcbvax.cchem.berkeley.edu>  Sat, 28 Feb 1998 21:58:07 -0800
-
-Local variables:
-mode: debian-changelog
-add-log-mailing-address: "schmitz@biophys.uni-duesseldorf.de"
-End:
