@@ -26,6 +26,20 @@ Description: fdisk partition manipulation tool for PowerPC
  It supports the PC partition format as used on PowerPC. It is an 
  interactive tool similar to PC fdisk. 
 
+Package: mac-fdisk-cross
+Architecture: m68k
+Section: otherosfs
+Priority: extra
+Depends: ${shlibs:Depends}
+Description: Apple disk partition manipulation tool
+ The fdisk utilities from the MkLinux project, adopted for Linux/m68k.
+ Mac-fdisk allows you to create and edit the partition table of a disk. 
+ It supports only the Apple partition format used on Macintosh and PowerMac, 
+ use pmac-fdisk for PC partition format disks as used on PowerPC machines. 
+ Mac-fdisk is an interactive tool with a menu similar to PC fdisk, supported 
+ options are somewhat different from PC fdisk due to the differences in 
+ partition format.
+
 Package: pmac-fdisk-cross
 Architecture: m68k
 Section: otherosfs
