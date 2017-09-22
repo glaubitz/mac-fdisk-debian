@@ -27,7 +27,7 @@ Description: fdisk partition manipulation tool for PowerPC
  interactive tool similar to PC fdisk. 
 
 Package: mac-fdisk-cross
-Architecture: m68k
+Architecture: i386 m68k
 Section: otherosfs
 Priority: extra
 Depends: ${shlibs:Depends}
@@ -41,7 +41,7 @@ Description: Apple disk partition manipulation tool
  partition format.
 
 Package: pmac-fdisk-cross
-Architecture: m68k
+Architecture: i386 m68k
 Section: otherosfs
 Priority: extra
 Depends: ${shlibs:Depends}
