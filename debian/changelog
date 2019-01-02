@@ -1,3 +1,9 @@
+mac-fdisk (0.1-19) UNRELEASED; urgency=medium
+
+  * Use secure URI in Vcs control header.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 15 Sep 2018 11:05:08 +0100
+
 mac-fdisk (0.1-18) unstable; urgency=medium
 
   * New maintainer:
